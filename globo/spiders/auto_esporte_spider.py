@@ -1,6 +1,6 @@
 from scrapy.spiders import Spider
 from bs4 import BeautifulSoup
-from utils import split_elements, parse_element_to_json
+from ..utils import split_elements, parse_element_to_json
 
 
 class AutoEsporteSpider(Spider):
@@ -13,7 +13,17 @@ class AutoEsporteSpider(Spider):
     }
 
     def parse(self, response):
-
+        """
+        @url http://revistaautoesporte.globo.com/rss/ultimas/feed.xml
+        @returns item 1 10
+        @returns requests 0 0
+        @scrapes feed
+        @has_itens X-CustomHeader
+        @has_title
+        @has_link
+        @has_description
+        @has_description_somithing
+        """
         itens_tag = response.xpath('//item')
 
         for t, l, d in list(zip(itens_tag.xpath('.//title/text()'),

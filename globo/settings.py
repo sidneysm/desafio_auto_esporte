@@ -88,3 +88,11 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+SPIDER_CONTRACTS = {
+    'globo.contracts.HasItemContract': 10,
+    'globo.contracts.HasTitleItem': 10,
+    'globo.contracts.HasLinkItem': 10,
+    'globo.contracts.HasDescriptionItem': 10,
+    'globo.contracts.HasDescriptionSomething': 10,
+}
