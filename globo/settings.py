@@ -89,6 +89,7 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+# Adiciona os contratos ao projeto
 SPIDER_CONTRACTS = {
     'globo.contracts.HasItemContract': 10,
     'globo.contracts.HasTitleItem': 10,

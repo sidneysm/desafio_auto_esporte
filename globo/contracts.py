@@ -2,8 +2,8 @@ from scrapy.contracts import Contract
 from scrapy.exceptions import ContractFail
 
 
+# Testa se na saída há pelo um item
 class HasItemContract(Contract):
-
     name = 'has_itens'
 
     def post_process(self, output):
@@ -11,6 +11,7 @@ class HasItemContract(Contract):
             raise ContractFail('Não nenhum item na saída')
 
 
+# Testa se no item tem um objeto 'title'
 class HasTitleItem(Contract):
 
     name = 'has_title'
@@ -20,6 +21,7 @@ class HasTitleItem(Contract):
             raise ContractFail('Não há título no primeiro item da saída')
 
 
+# Testa se no item tem um objeto 'link'
 class HasLinkItem(Contract):
 
     name = 'has_link'
@@ -29,6 +31,7 @@ class HasLinkItem(Contract):
             raise ContractFail('Não há link no primeiro item da saída')
 
 
+# Testa se no item tem um objeto 'description'
 class HasDescriptionItem(Contract):
 
     name = 'has_description'
@@ -38,6 +41,7 @@ class HasDescriptionItem(Contract):
             raise ContractFail('Não há descrição no primeiro item da saída')
 
 
+# Testa se alguma informação foi adicionada a descrição
 class HasDescriptionSomething(Contract):
 
     name = 'has_description_something'
