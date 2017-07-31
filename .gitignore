@@ -2,3 +2,4 @@
 __pycache__/*
 build/
 project.egg-info
+dbs/

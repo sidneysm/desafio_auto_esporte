@@ -22,7 +22,7 @@ class AutoEsporteSpider(Spider):
         @has_title
         @has_link
         @has_description
-        @has_description_somithing
+        @has_description_something
         """
         itens_tag = response.xpath('//item')
 

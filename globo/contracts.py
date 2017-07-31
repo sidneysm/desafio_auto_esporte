@@ -40,7 +40,7 @@ class HasDescriptionItem(Contract):
 
 class HasDescriptionSomething(Contract):
 
-    name = 'has_description_somithing'
+    name = 'has_description_something'
 
     def post_process(self, output):
         desc = output[0]['feed'][0]['item']['description']
